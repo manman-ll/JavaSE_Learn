@@ -139,9 +139,7 @@ public class TreeNode {
         return ret;
     }
     public void levelOrder(TreeNode root,int depth,ArrayList<List<Integer>> ret) {
-        if(root == null){
-            return;
-        }
+        if(root == null) return;
         if(depth >= ret.size()) ret.add(new ArrayList<Integer>());
         ret.get(depth).add(root.val);
         levelOrder(root.left,depth+1,ret);
